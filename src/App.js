@@ -8,12 +8,15 @@ import DetailView from './components/DetailView'; // Import the DetailView compo
 import { Link } from 'react-router-dom';
 
 const App = () => {
-  
-  // const descr = ''
-
+  // If posts were to be used in your app, define them here
   const posts = [
-  ]
- 
+    // Example of posts
+    { id: 1, title: 'First Post', content: 'This is the first post' },
+    { id: 2, title: 'Second Post', content: 'This is the second post' },
+    // Add more posts here as needed
+  ];
+
+  // Set up routing for your app
   let element = useRoutes([
     { path: "/", element: <ReadPosts data={posts}/> },
     { path: "/edit/:id", element: <EditPost data={posts} /> },
